@@ -1,0 +1,14 @@
+#carusel img {
+  height: 30rem;
+}
+* {
+  list-style: none;
+}
+.iconos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem auto;
+  gap: 2rem;
+}
+/*# sourceMappingURL=style.css.map */
