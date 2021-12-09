@@ -11,24 +11,24 @@
 
 // new Datatable(document.getElementById("datatable"), basicData);
 
-const form = document.getElementById("form");
-const username = document.getElementById("username");
+const formulario = document.getElementById("formulario");
+const usuario = document.getElementById("usuario");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 
 // Show Input Error Message
-function showError(input, message) {
-  const formControl = input.parentElement;
-  formControl.className = "form-control error";
-  const small = formControl.querySelector("small");
+function mostrarError(input, message) {
+  const controlForm = input.parentElement;
+  controlForm.className = "control-form error";
+  const small = controlForm.querySelector("small");
   small.innerText = message;
 }
 
 // Show Input Success Message
-function showSuccess(input) {
-  const formControl = input.parentElement;
-  formControl.className = "form-control success";
+function mostrarExito(input) {
+  const controlForm = input.parentElement;
+  controlForm.className = "control-form exito";
 }
 
 // Check email is valid
@@ -36,20 +36,20 @@ function checkEmail(input) {
   const re =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (re.test(input.value.trim())) {
-    showSuccess(input);
+    mostrarExito(input);
   } else {
-    showError(input, "El email no es valido");
+    mostrarError(input, "El email no es valido");
   }
 }
 
 // Check required fields
 
-function checkRequired(inputArr) {
+function verificarRequerido(inputArr) {
   inputArr.forEach(function (input) {
     if (input.value.trim() === "") {
-      showError(input, "Este campo es requerido");
+      mostrarError(input, "Este campo es requerido");
     } else {
-      showSuccess(input);
+      mostrarExito(input);
     }
   });
 }
@@ -57,27 +57,27 @@ function checkRequired(inputArr) {
 // Check Input length
 function checkLength(input, min, max) {
   if (input.value.length < min) {
-    showError(input, `Ingrese mas de ${min} caracteres`);
+    mostrarError(input, `Ingrese mas de ${min} caracteres`);
   } else if (input.value.length > max) {
-    showError(input, `Maximo ${max} caracteres`);
+    mostrarError(input, `Maximo ${max} caracteres`);
   } else {
-    showSuccess(input);
+    mostrarExito(input);
   }
 }
 
 // Check Password Match
-function checkPasswordMatch(password, password2) {
+function VerificarPasswords(password, password2) {
   if (password.value !== password2.value) {
-    showError(password2, "Las contraseñas no coinciden");
+    mostrarError(password2, "Las contraseñas no coinciden");
   }
 }
 
 // Event Listeners
-form.addEventListener("submit", function (e) {
+formulario.addEventListener("submit", function (e) {
   e.preventDefault();
-  checkRequired([username, email, password, password2]);
-  checkLength(username, 3, 15);
+  verificarRequerido([usuario, email, password, password2]);
+  checkLength(usuario, 3, 15);
   checkLength(password, 6, 25);
   checkEmail(email);
-  checkPasswordMatch(password, password2);
+  VerificarPasswords(password, password2);
 });

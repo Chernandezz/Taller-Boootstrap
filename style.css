@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --success-color: #2ecc71;
+  --exito-color: #2ecc71;
   --error-color: #e74c3c;
 }
 
@@ -45,23 +45,24 @@ h2 {
   margin: 0 0 2rem;
 }
 
-.form {
+.formulario {
   padding: 3rem 4rem;
 }
 
-.form-control {
-  margin-bottom: 1rem;
-  padding-bottom: 2rem;
+.control-form {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem !important;
   position: relative;
+  border: none !important;
 }
 
-.form-control label {
+.control-form label {
   color: #777;
   display: block;
   margin-bottom: 0.5rem;
 }
 
-.form-control input {
+.control-form input {
   border: 2px solid #f0f0f0;
   border-radius: 0.4rem;
   display: block;
@@ -70,20 +71,20 @@ h2 {
   font-size: 1.4rem;
 }
 
-.form-control input:focus {
+.control-form input:focus {
   outline: 0;
   border-color: #777;
 }
 
-.form-control.success input {
-  border-color: var(--success-color);
+.control-form.exito input {
+  border-color: var(--exito-color);
 }
 
-.form-control.error input {
+.control-form.error input {
   border-color: var(--error-color);
 }
 
-.form-control small {
+.control-form small {
   color: var(--error-color);
   position: absolute;
   font-size: 1rem;
@@ -92,11 +93,11 @@ h2 {
   visibility: hidden;
 }
 
-.form-control.error small {
+.control-form.error small {
   visibility: visible;
 }
 
-.form button {
+.formulario button {
   cursor: pointer;
   background-color: #3498db;
   border: 2px solid #3498db;
@@ -108,5 +109,3 @@ h2 {
   margin-top: 2rem;
   width: 100%;
 }
-
-/*# sourceMappingURL=style.css.map */

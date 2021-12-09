@@ -66,7 +66,7 @@
           </ul>
           <form class="d-flex">
             <input
-              class="form-control me-2"
+              class="control-form me-2"
               type="Buscar"
               placeholder="Buscar"
               aria-label="Buscar"
@@ -160,7 +160,7 @@
               alt="..."
             />
           </div>
->
+          >
 
           <div class="carousel-item" data-bs-interval="5000">
             <img
@@ -192,45 +192,47 @@
     </div>
 
     <!-- Formulario -->
-    <form class="form" id="form">
-      <h2>registrarse</h2>
-      <div class="form-control">
-        <label for="username">Usuario</label>
-        <input type="text" id="username" placeholder="Ingrese su usuario" />
+    <form class="formulario" id="formulario">
+      <h2>Ingresar</h2>
+      <div class="control-form">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" placeholder="Ingrese su usuario" />
+        <small></small>
       </div>
-      <div class="form-control">
+      <div class="control-form">
         <label for="email">Email</label>
         <input type="text" id="email" placeholder="Ingrese su email" />
+        <small></small>
       </div>
-      <div class="form-control">
+      <div class="control-form">
         <label for="password">Contraseña</label>
         <input
           type="password"
           id="password"
           placeholder="Ingrese su Contraseña"
         />
+        <small></small>
       </div>
-      <div class="form-control">
+      <div class="control-form">
         <label for="password2">Confirmar contraseña</label>
         <input
           type="password"
           id="password2"
           placeholder="Ingrese de nuevo su contraseña"
         />
+        <small></small>
       </div>
       <button type="submit">Ingresar</button>
     </form>
 
     <!--- Grafico -->
-    <h2>Medallas obtenidas por armenia en  juegos nacionales 2018</h2>
+    <h2>Medallas obtenidas por armenia en juegos nacionales 2018</h2>
     <div id="grafico"></div>
     <h2>Medallas contribuidas por deporte/disciplina</h2>
     <div id="grafico2"></div>
 
-
     <!-- Footer -->
     <footer class="py-5">
-      
       <div class="row">
         <div class="col-6 col-md">
           <h5>Equipo</h5>
@@ -251,7 +253,6 @@
           </ul>
         </div>
       </div>
-
     </footer>
     <!-- Link Bootstrap JS -->
     <script src="script.js"></script>
